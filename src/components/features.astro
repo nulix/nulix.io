@@ -1,0 +1,73 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Deploy Your Own Applications",
+    description:
+      "Our host Linux OS is designed to provide support for containerized applications, ensuring seamless deployment and management of isolated environments using modern, container-based workflows.",
+    icon: "bx:code-alt",
+  },
+  {
+    title: "Custom Hardware",
+    description:
+      "It also offers comprehensive support for custom hardware and Board Support Packages (BSP), ensuring seamless integration and optimal performance across diverse embedded systems.",
+    icon: "bx:chip",
+  },
+  {
+    title: "Secure",
+    description:
+      "Additionally, it includes advanced security features and secure boot capabilities to ensure your systems are protected from unauthorized access and threats.",
+    icon: "bx:lock",
+  },
+  {
+    title: "OTA Updates",
+    description:
+      "The platform also supports OTA updates, enabling efficient and secure remote updates to keep your devices up-to-date with the latest features and security patches.",
+    icon: "bx:cloud-download",
+    FontFaceSet: "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css",
+  },
+  {
+    title: "Lightweight and Fast",
+    description:
+      "Our host Linux OS is optimized to be lightweight and fast-booting, ensuring minimal startup times and efficient performance on a resource-constrained embedded devices.",
+    icon: "bx:stopwatch",
+  },
+  {
+    title: "Host OS Updates",
+    description:
+      "We provide regular host Linux OS updates and security patches, ensuring your systems remain secure and up-to-date with the latest advancements and protections.",
+    icon: "bx:loader",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need for your embedded device
+  </h2>
+  <p class="text-lg mt-4 text-slate-600 font-mono">
+    From initial design to final deployment, NULIX provides comprehensive
+    support at every stage. Our expert team ensures your project is secure,
+    efficient, and ready for the future.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed font-mono">
+            {item.description}
+          </p>
+        </div>
+      </div>
+    ))
+  }
+</div>

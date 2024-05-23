@@ -1,0 +1,63 @@
+---
+import { Picture } from "astro:assets";
+import platformImg from "assets/platform.svg";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={platformImg}
+      alt="Platform Development"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold font-sans lg:tracking-tight xl:tracking-tighter">
+      Platform for Embedded Devices
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl font-mono">
+      Check out our in-house designed platform for embedded devices, featuring
+      robust build and deployment infrastructure for host Linux OS and
+      applications which are isolated in virtualized enivronment. It also
+      supports Over-The-Air updates, device management, fleet overview, and
+      device diagnostics. This helps you develop your embedded projects faster,
+      ensuring they are always up-to-date and protected against vulnerabilities.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <!-- <Link
+        href="#"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+        Download for Free
+      </Link> -->
+      <Link
+        href="https://github.com/nulix"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener"
+        target="_blank">
+        <Icon class="text-white w-5 h-5" name="bx:bxl-github" />
+        GitHub Repo
+      </Link>
+      <!-- <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/nulix"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        GitHub Repo
+      </Link> -->
+    </div>
+  </div>
+</main>
