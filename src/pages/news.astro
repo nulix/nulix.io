@@ -16,13 +16,11 @@ publishedBlogEntries.sort(function (a, b) {
 });
 ---
 
-<Layout title="Blog">
+<Layout title="News">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Our Blog</Fragment>
-      <Fragment slot="desc">
-        We write about building startups and thoughts going on our mind.
-      </Fragment>
+      <Fragment slot="title">News</Fragment>
+      <Fragment slot="desc"> Learn about our latest news. </Fragment>
     </Sectionhead>
     <main class="mt-16">
       <ul class="grid gap-16 max-w-4xl mx-auto">
@@ -46,7 +44,7 @@ publishedBlogEntries.sort(function (a, b) {
                       {blogPostEntry.data.category}
                     </span>
 
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                    <h2 class="text-3xl leading-snug tracking-tight mt-1 ">
                       {blogPostEntry.data.title}
                     </h2>
 
