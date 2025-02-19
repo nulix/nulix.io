@@ -1,46 +1,53 @@
 ---
 // @ts-ignore
+import { Picture } from "astro:assets";
 ---
 
-<div class="mt-24">
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-    <a href="https://techpark.hr" target="_blank" rel="noopener noreferrer">
-      <img
-        class="logos-dark"
-        src="/tech-park-black.png"
-        alt="TechPark"
-        width="150"
-        height="auto"
-      />
-    </a>
-
-    <a href="https://techpark.hr" target="_blank" rel="noopener noreferrer">
-      <img
-        class="logos-light"
+<div class="mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-20">
+  <div class="flex items-center gap-8">
+    <a
+      href="https://techpark.hr"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group block text-gray-800 mt-3">
+      <Picture
         src="/tech-park-white.png"
         alt="TechPark"
-        width="150"
-        height="auto"
+        sizes="150px"
+        width={150}
+        height={150}
+        class="w-[150px] h-[150px] rounded-md transition group-hover:-translate-y-1 bg-white object-contain object-center logos-light"
+      />
+      <Picture
+        src="/tech-park-black.png"
+        alt="TechPark"
+        sizes="150px"
+        width={150}
+        height={150}
+        class="w-[150px] h-[150px] rounded-md transition group-hover:-translate-y-1 bg-white object-contain object-center logos-dark"
       />
     </a>
 
-    <a href="https://voogle.hr" target="_blank" rel="noopener noreferrer">
-      <img
-        class="logos-dark"
-        src="/voogle-black.png"
-        alt="Voogle"
-        width="200"
-        height="auto"
-      />
-    </a>
-
-    <a href="https://voogle.hr" target="_blank" rel="noopener noreferrer">
-      <img
-        class="logos-light"
+    <a
+      href="https://voogle.hr"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group block text-gray-800 mt-3">
+      <Picture
         src="/voogle-white.png"
         alt="Voogle"
-        width="200"
-        height="auto"
+        sizes="150px"
+        width={150}
+        height={150}
+        class="w-[150px] h-[150px] rounded-md transition group-hover:-translate-y-1 bg-white object-contain object-center logos-light"
+      />
+      <Picture
+        src="/voogle-black.png"
+        alt="Voogle"
+        sizes="150px"
+        width={150}
+        height={150}
+        class="w-[150px] h-[150px] rounded-md transition group-hover:-translate-y-1 bg-white object-contain object-center logos-dark"
       />
     </a>
   </div>
