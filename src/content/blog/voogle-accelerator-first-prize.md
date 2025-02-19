@@ -29,7 +29,6 @@ On Demo Day, we had the opportunity to showcase our project to a distinguished a
 ## The Prize
 
 As first-place winners, we received a financial award of €3,000, along with access to co-working spaces and additional support services within the Technology Park Varaždin. This support is instrumental as we move forward, providing us with the resources and environment necessary to scale our operations and bring our vision to fruition.
-VARAZDINSKI.NET.HR
 
 ## Looking Ahead
 
