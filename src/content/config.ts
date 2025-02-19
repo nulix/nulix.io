@@ -23,6 +23,8 @@ const teamCollection = defineCollection({
     draft: z.boolean(),
     name: z.string(),
     title: z.string(),
+    description: z.string(),
+    linkedin: z.string().url().optional(),
     avatar: z.object({
       src: z.string(),
       alt: z.string(),
