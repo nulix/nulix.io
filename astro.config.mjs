@@ -6,6 +6,6 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://nulix.hr",
+  site: "https://nulix.io",
   integrations: [tailwind(), mdx(), sitemap(), icon()],
 });
