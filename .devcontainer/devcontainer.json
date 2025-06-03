@@ -1,0 +1,21 @@
+{
+    "name": "nulix.io",
+    "image": "node:alpine",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/nulix.io,type=bind"
+    ],
+    "workspaceFolder": "/nulix.io",
+    "remoteEnv": {
+        "ENV": "/etc/profile"
+    },
+    "forwardPorts": [4321, 4321],
+    "postCreateCommand": "echo \"alias ll='ls -lh'\" > /etc/profile.d/aliases.sh",
+    "postStartCommand": "npm install -g pnpm && apk add --no-cache git",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "astro-build.astro-vscode"
+            ]
+        }
+    }
+}

@@ -3,6 +3,7 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Icon } from "astro-icon/components";
 import ThemeIcon from "@components/themeicon.astro";
 
 const menuitems = [
@@ -97,10 +98,19 @@ const menuitems = [
             href="http://platform.nulix.io"
             target="_blank"
             rel="noopener noreferrer"
-            style="muted"
+            style="outline"
+            class="border-neon text-neon"
             block
             size="md">Platform</Link
           >
+          <Link
+            href="https://github.com/nulix"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="icon"
+            class="flex gap-1 items-center justify-center">
+            <Icon class="w-5 h-5" name="bx:bxl-github" />
+          </Link>
           <!-- <Link href="/contact" size="md" block>Sign up</Link> -->
           <ThemeIcon />
         </div>
@@ -113,10 +123,19 @@ const menuitems = [
           target="_blank"
           rel="noopener noreferrer"
           style="outline"
+          class="border-neon text-neon"
           size="md">Platform</Link
         >
-        <!-- <Link href="/contact" size="md">Sign up</Link> -->
+        <Link
+          style="icon"
+          href="https://github.com/nulix"
+          target="_blank"
+          class="flex gap-1 items-center justify-center"
+          rel="noopener noreferrer">
+          <Icon class="w-5 h-5" name="bx:bxl-github" />
+        </Link>
         <ThemeIcon />
+        <!-- <Link href="/contact" size="md">Sign up</Link> -->
       </div>
     </div>
   </header>
