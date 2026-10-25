@@ -6,7 +6,7 @@ export default function Footer() {
         <nav aria-label="Footer">
           <a href="/#integration">Integration</a>
           <a href="https://docs.nulix.io">Docs</a>
-          <a href="/status">Status</a>
+          <a href="https://platform.nulix.io">Status</a>
           <a href="/privacy">Privacy</a>
           <a href="/#demo">Contact</a>
         </nav>
