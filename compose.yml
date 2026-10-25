@@ -1,0 +1,36 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - WATCHPACK_POLLING=false
+      - CHOKIDAR_USEPOLLING=false
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    restart: unless-stopped
+    develop:
+      watch:
+        - action: sync
+          path: ./app
+          target: /app/app
+        - action: sync
+          path: ./public
+          target: /app/public
+        - action: sync
+          path: ./next.config.mjs
+          target: /app/next.config.mjs
+        - action: sync
+          path: ./tsconfig.json
+          target: /app/tsconfig.json
+        - action: sync
+          path: ./next-env.d.ts
+          target: /app/next-env.d.ts
+        - action: rebuild
+          path: ./package.json
+        - action: rebuild
+          path: ./package-lock.json
+        - action: rebuild
+          path: ./Dockerfile
