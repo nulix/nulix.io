@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Uncomment for a fully static export (GitHub Pages, any static host):
-  // output: "export",
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 };
 export default nextConfig;
