@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export const metadata = {
-  title: "Privacy Policy – NULIX",
-  description: "How NULIX handles your data.",
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "How NULIX collects, uses, and protects your data.",
+  alternates: { canonical: "/privacy/" },
 };
 
 export default function PrivacyPage() {

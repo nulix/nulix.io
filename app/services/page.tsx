@@ -1,9 +1,20 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import JsonLd from "../components/JsonLd";
 
-export const metadata = {
-  title: "Services – NULIX",
-  description: "Custom hardware design, PCB, firmware, and embedded Linux development services.",
+const description =
+  "Custom hardware design, PCB layout, firmware, and embedded Linux development (Yocto, Buildroot, Docker) services from NULIX.";
+
+export const metadata: Metadata = {
+  title: "Engineering Services",
+  description,
+  alternates: { canonical: "/services/" },
+  openGraph: {
+    title: "Engineering Services – NULIX",
+    description,
+    url: "/services/",
+  },
 };
 
 const services = [
@@ -25,9 +36,30 @@ const services = [
   },
 ];
 
+const serviceList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: services.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Service",
+      name: s.title,
+      description: s.desc,
+      provider: {
+        "@type": "Organization",
+        name: "NULIX",
+        url: "https://nulix.io",
+      },
+      areaServed: "Worldwide",
+    },
+  })),
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd data={serviceList} />
       <Header />
       <main className="wrap" style={{ paddingTop: 64, paddingBottom: 96 }}>
         <h1 className="section-title" style={{ marginBottom: 16 }}>Engineering Services</h1>

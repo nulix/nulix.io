@@ -1,9 +1,12 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export const metadata = {
-  title: "Status – NULIX",
-  description: "NULIX system status.",
+export const metadata: Metadata = {
+  title: "System Status",
+  description: "Current status of NULIX services.",
+  alternates: { canonical: "/status/" },
+  robots: { index: false, follow: true },
 };
 
 export default function StatusPage() {
